@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewData["Title"] = "Task";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<div class="card ">
+	<div class="card-header">
+		<h4 class="card-title">@ViewData["Title"]</h4>
+		<hr>
+	</div>
+	<div class="card-body">
+		<div class="row">
+			<div class="col-md-12">
+				<a href="/Home/AddTask" class="btn btn-outline-danger"><i class="fa fa-plus" aria-hidden="true"></i> Add New</a>
+			</div>
+			<div class="col-md-12 mt-4">
+				<div id="section-task">
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+</div>
+
+@section scripts{
+    <script src="~/js/Task.js"></script>
+	<script type="text/javascript">
+		$(function () { 
+			Task.bindTask();
+		});
+	</script>
+}
